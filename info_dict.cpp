@@ -2,6 +2,8 @@
 #include "multi_info_dict.hpp"
 #include "info_dict.hpp"
 #include "bencode.hpp"
+#include <vector>
+using std::vector;
 
 info_dict_type InfoDict::GetDictType(string torrent_data)
 {
@@ -31,4 +33,15 @@ MultiFileInfoDict::MultiFileInfoDict(string raw_info_dict)
 {
   auto info_data = bencode::boost_decode_view(raw_info_dict);
   auto dict_value = boost::get<bencode::dict_view>(info_data);
+  auto raw_files = std::get<vector<bencode::data>>(dict_value.find("files")->second);
+
+  for (auto & element : raw_files)
+  {
+    files.push_back(SingleFileInfo(element));
+  }
+}
+
+SingleFileInfo::SingleFileInfo(bencode::data raw_single_info)
+{
+  
 }

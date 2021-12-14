@@ -1,8 +1,6 @@
 #include <vector>
-#include <map>
 #include <bencode.hpp>
 using std::vector;
-using std::map;
 #include "info_dict.hpp"
 #include "single_file_info.hpp"
 
