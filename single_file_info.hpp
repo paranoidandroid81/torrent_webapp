@@ -14,7 +14,7 @@ class SingleFileInfo
     long long length;
     string md5sum;
     vector<string> path;
-    SingleFileInfo(bencode::data raw_single_info);
+    SingleFileInfo(bencode::boost_data_view& raw_single_info);
 };
 
 #endif

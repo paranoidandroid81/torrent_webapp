@@ -16,8 +16,8 @@ class InfoDict {
     char const *pieces;
     long long private_sign;
     string name;
-    static info_dict_type GetDictType(string raw_info_dict);
-    InfoDict(string raw_info_dict);
+    static info_dict_type GetDictType(string& raw_info_dict);
+    InfoDict(string& raw_info_dict);
 };
 
 #endif

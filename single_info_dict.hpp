@@ -8,7 +8,7 @@ class SingleFileInfoDict : InfoDict
   public:
     long long length;
     string md5sum;
-    SingleFileInfoDict(string raw_info_dict);
+    SingleFileInfoDict(string& raw_info_dict);
 };
 
 #endif

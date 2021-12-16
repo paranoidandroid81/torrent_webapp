@@ -11,7 +11,7 @@ class MultiFileInfoDict : InfoDict
 {
   public:
     vector<SingleFileInfo> files;
-    MultiFileInfoDict(string raw_info_dict);
+    MultiFileInfoDict(string& raw_info_dict);
 };
 
 #endif
